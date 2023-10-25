@@ -9,6 +9,12 @@
 module add pov-ray
 
 id=${SLURM_ARRAY_TASK_ID}
+
+if [[ -z $id ]]; then
+  echo "SLURM_ARRAY_TASK_ID IS NOT DEFINED"
+fi
+
+
 start_frame=$((4 * id + 1))
 end_frame=$((4 * id + 3))
 

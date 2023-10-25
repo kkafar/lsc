@@ -18,4 +18,4 @@ module add pov-ray
 start_frame=$((4 * id + 1))
 end_frame=$((4 * id + 4))
 
-povray Subset_Start_Frame=1 Subset_End_Frame=2 animation_a_.ini
+povray Subset_Start_Frame=${start_frame} Subset_End_Frame=${end_frame} animation_a_.ini

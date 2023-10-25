@@ -3,8 +3,8 @@
 x=4
 y="6"
 
-out1=$((x * y))
-out2=$(($x * $y))
+out1=$((x * y + 1))
+out2=$(($x * $y + 1))
 out3=$((z + 1))
 
 echo $out1

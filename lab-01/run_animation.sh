@@ -6,14 +6,14 @@
 #SBATCH --account=plglscclass23-cpu
 #SBATCH --array=0-24
 
-module add pov-ray
-
 id=${SLURM_ARRAY_TASK_ID}
 
 if [[ -z $id ]]; then
   echo "SLURM_ARRAY_TASK_ID IS NOT DEFINED"
+  exit 1
 fi
 
+module add pov-ray
 
 start_frame=$((4 * id + 1))
 end_frame=$((4 * id + 3))

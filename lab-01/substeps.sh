@@ -6,7 +6,7 @@
 #SBATCH --account=plglscclass23-cpu
 
 echo "Scheduling first job step $(date +%H:%M:%S)"
-srun --nodes=1 --ntasks-per-node=1 sleep 5m &
+srun -N 1 -n 1 --exclusive sleep 1m &
 echo "Scheduling second job step $(date +%H:%M:%S)"
-srun --nodes=1 --ntasks-per-node=1 sleep 5m &
+srun -N 1 -n 1 --exclusive sleep 1m &
 wait

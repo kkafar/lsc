@@ -3,3 +3,4 @@
 *.png
 .envrc
 large-files
+*.pem
